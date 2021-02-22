@@ -1,6 +1,7 @@
 from display import *
 from draw import *
 import math
+import random
 
 s = new_screen()
 RULES = { 'F' : '-[F]++[F][F]-[F][F]G+[-F]-G[-GF]+F',
@@ -46,8 +47,7 @@ def draw_tree(x, y, inst, init_angle, angle, dist, screen):
 
 for x in range(XRES):
     for y in range(YRES):
-        s[y][x] = [ 0, 191, 255]
-
+        s[y][x] = [0, 191, 255]
 
 color = [31, 47, 26]
 x = init_tree(7, "F")
@@ -55,7 +55,10 @@ draw_tree(XRES - 50, YRES / 2 + 30, x, 270, 35, 1.2, s)
 
 for x in range(XRES):
     for y in range(YRES - 40, YRES):
-        s[y][x] = [210,105,30]
+        if (random.random() < 0.2):
+            s[y][x] = [101, 67, 33]
+        else:
+            s[y][x] = [210,105,30]
 
 """
 c = [ 0, 255, 0 ]
