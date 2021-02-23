@@ -4,7 +4,7 @@ import math
 import random
 
 s = new_screen()
-RULES = { 'F' : '-[F]++[F][F]-[F][F]G+[-F]-G[-GF]+F',
+"""RULES = { 'F' : '-[F]++[F][F]-[F][F]G+[-F]-G[-GF]+F',
         'G' : 'GG',
         '[' : '[',
         ']' : ']',
@@ -91,7 +91,7 @@ c[BLUE] = 0;
 c[GREEN] = 255;
 draw_line(0, YRES/2, XRES-1, YRES/2, s, c);
 draw_line(XRES/2, 0, XRES/2, YRES-1, s, c);
-"""
+
 
 display(s)
 save_ppm(s, 'binary.ppm')
